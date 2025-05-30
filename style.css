@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1000px;
+    background-color:beige ;
+    margin: 0 auto;
+    text-align: center;
+    /* border: 1px solid black; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    margin-top: 100px;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 100px;
+}
+
+li {
+    display: inline-block;
+    margin: 30px;
+    border: 1px solid red;
+}
+
+a {
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 350px;
+    height: 400px;
+    width: 250px;
+    background-color:honeydew;
+}
+
+.potatoes {
+    margin-right: 0 auto;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    background-color: bisque;
+    width: 1000px;
+    font-size: 12px;
+    padding: 15px;
+}
