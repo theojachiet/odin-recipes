@@ -1,0 +1,40 @@
+/* Resizing the images approximately to see better */
+
+.all_presentation img {
+    width: 800px;
+    height: auto    ;
+}
+
+.card img {
+    width: 300px;
+    height: auto;
+}
+
+/* General styling and fonts */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    color : white;
+    background: #3882F6;
+    padding : 10px 40px;
+}
+
+ul {
+    list-style-type: none;
+    padding:0;
+}
