@@ -1,9 +1,6 @@
 /* Resizing the images approximately to see better */
 
-.all_presentation img {
-    width: 800px;
-    height: auto    ;
-}
+
 
 .card img {
     width: 300px;
@@ -11,17 +8,23 @@
 }
 
 /* General styling and fonts */
+
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 button {
@@ -29,12 +32,67 @@ button {
     font-weight: bold;
     border: none;
     border-radius: 8px;
-    color : white;
+    color: white;
     background: #3882F6;
-    padding : 10px 40px;
+    padding: 10px 40px;
 }
 
 ul {
     list-style-type: none;
-    padding:0;
+    padding: 0;
+}
+
+/* Arranging the page with flexbox */
+/* HEADER */
+
+section {
+    flex: 1;
+    /*  To keep the header down */
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1F2937;
+    color: white;
+}
+
+header ul {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+/* PRESENTATION */
+
+.all_presentation {
+    width: 100%;
+    background-color: #1F2937;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8vw;
+    padding: 80px 0;
+}
+
+.all_presentation img {
+    width: 100%;
+    height: auto;
+    max-width: 650px;
+}
+
+.all_presentation .left_presentation {
+    max-width: 400px;
+}
+
+.all_presentation .left_presentation h2 {
+    font-size: 40px;
+    margin: 0;
 }
