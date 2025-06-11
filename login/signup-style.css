@@ -1,0 +1,242 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root {
+    --left-margin: 2rem;
+}
+
+body {
+    display: flex;
+    font-family: 'Josefin Sans', Tahoma, sans-serif;
+}
+
+#container-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 50vh;
+    min-width: 35vw;
+    height: 100vh;
+    background-image: url(../images/croque.jpg);
+    text-align: center;
+}
+
+.photo-credit {
+    color: white;
+    margin: 20px;
+}
+
+#title {
+    color: whitesmoke;
+    background-color: rgb(50 50 50 / 40%);
+    padding: 60px;
+    font-size: 4rem;
+}
+
+.bash {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#container-content {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245, 245, 245);
+    justify-content: space-evenly;
+}
+
+header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--left-margin);
+    max-height: 33vh;
+}
+
+header p {
+    font-size: 1.3em;
+    font-weight: bold;
+    width: 80%;
+}
+
+section {
+    flex: 1;
+    background-color: white;
+    box-shadow: 0px 5px 10px #ddd;
+    max-height: 40vh;
+    padding: 20px 0;
+}
+
+section form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+section h2 {
+    padding-left: var(--left-margin);
+    font-weight: 200;
+    margin-top: 1rem;
+}
+
+section div {
+    padding: 1rem;
+    padding-left: var(--left-margin);
+    margin-right: 3em;
+}
+
+section label, section input {
+    display: block;
+    flex: auto;
+    width: 18vw;
+}
+
+footer {
+    flex: 1;
+}
+
+footer div, footer p {
+    margin: var(--left-margin);
+}
+
+/* Footer */
+
+.button-submit button {
+    appearance: none;
+    color: white;
+    font-weight: bold;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #8dc6ff;
+}
+
+.button-submit button:hover {
+    background-color: #34495e;
+    box-shadow: 0px 2px 10px #ccc;
+}
+
+.button-submit button:active {
+    background-color: #22313f;
+}
+
+footer a {
+    color: #8dc6ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Form details  */
+
+form input {
+    appearance: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    height: 2em;
+    padding-left: 0.5em;
+}
+
+form input:focus {
+    border: 2px solid #8dc6ff;
+    box-shadow: 0px 2px 10px #ccc;
+    outline: none;
+}
+
+form input:hover {
+    box-shadow: 0px 2px 10px #ccc;
+    outline: none;
+}
+
+form label {
+    color: #555;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 0.2em;
+}
+
+form input:required {
+    border: 1px solid red;
+    box-shadow: inset 0px 2px 5px #ccc;
+}
+
+form input:required:focus {
+    border: 1px solid red;
+    box-shadow: 0px 2px 10px #ccc;
+}

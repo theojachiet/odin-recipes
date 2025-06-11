@@ -10,9 +10,8 @@
 
 <body>
     <div id="container-title">
-        <img src="../images/croque.jpg" alt="a random picture of something cool">
         <div id="title">
-            <span class="dish">Dish </span><span class="bash">BASH#</span>
+            <p><span class="dish">DISH </span><span class="bash">BASH#</span></p>
         </div>
         <p class="photo-credit">Photo by : Unknown</p>
     </div>
@@ -21,29 +20,43 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolores non alias, id aperiam saepe
                 tempora quos corrupti distinctio repellendus fuga odio facilis recusandae omnis maxime quaerat nesciunt,
                 accusantium quisquam.</p>
+                <br>
             <p>You know you want to</p>
         </header>
         <section>
+            <h2>Let's Do This !</h2>
             <form>
-                <label for="first-name">FIRST NAME</label>
-                <input type="text" id="first-name">
-                <label for="last-name">LAST NAME</label>
-                <input type="text" id="last-name">
-                <label for="email">EMAIL</label>
-                <input type="email" id="email">
-                <label for="phone">PHONE NUMBER</label>
-                <input type="tel" id="phone">
-                <label for="password">PASSWORD</label>
-                <input type="password" id="password">
-                <label for="confirm-password">CONFIRM PASSWORD</label>
-                <input type="password" id="confirm-password">
+                <div class="first-name">
+                    <label for="first-name">FIRST NAME</label>
+                    <input type="text" id="first-name">
+                </div>
+                <div class="lastname">
+                    <label for="last-name">LAST NAME</label>
+                    <input type="text" id="last-name">
+                </div>
+                <div class="email">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="phone">
+                    <label for="phone">PHONE NUMBER</label>
+                    <input type="tel" id="phone">
+                </div>
+                <div class="password">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="confirm">
+                    <label for="confirm-password">CONFIRM</label>
+                    <input type="password" id="confirm-password" required>
+                </div>
             </form>
         </section>
         <footer>
             <div class="button-submit">
                 <button type="submit">Create Account</button>
             </div>
-            <p>Already have an Account ? <a href="#">Login</a></p>
+            <p>Already have an Account ? <a href="#">Log in</a></p>
         </footer>
     </div>
 </body>
