@@ -77,6 +77,9 @@ h6 {
 
 :root {
     --left-margin: 2rem;
+    --color-palette-primary: #155263;
+    --color-palette-secondary : #ff9a3c;
+    --color-palette-third : #ff6f3c;
 }
 
 body {
@@ -185,20 +188,20 @@ footer div, footer p {
     padding: 1rem 2.5rem;
     border: none;
     border-radius: 8px;
-    background-color: #8dc6ff;
+    background-color: var(--color-palette-secondary);
 }
 
 .button-submit button:hover {
-    background-color: #34495e;
+    background-color: var(--color-palette-third);
     box-shadow: 0px 2px 10px #ccc;
 }
 
 .button-submit button:active {
-    background-color: #22313f;
+    background-color: var(--color-palette-primary);
 }
 
 footer a {
-    color: #8dc6ff;
+    color: var(--color-palette-primary);
     text-decoration: none;
     font-weight: bold;
 }
@@ -215,7 +218,7 @@ form input {
 }
 
 form input:focus {
-    border: 2px solid #8dc6ff;
+    border: 2px solid var(--color-palette-primary);
     box-shadow: 0px 2px 10px #ccc;
     outline: none;
 }
@@ -231,12 +234,28 @@ form label {
     padding-bottom: 0.2em;
 }
 
-form input:required {
+form label:has(+ input:required)::after {
+    content: '  *';
+}
+
+form input[type="password"]:required {
     border: 1px solid red;
     box-shadow: inset 0px 2px 5px #ccc;
 }
 
-form input:required:focus {
+form input[type="password"]:required:focus {
     border: 1px solid red;
     box-shadow: 0px 2px 10px #ccc;
+}
+
+form input::placeholder {
+    color: #ccc;
+}
+
+form input:invalid {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+form input:placeholder-shown {
+    background-color: #fff;
 }

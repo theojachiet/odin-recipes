@@ -13,14 +13,15 @@
         <div id="title">
             <p><span class="dish">DISH </span><span class="bash">BASH#</span></p>
         </div>
-        <p class="photo-credit">Photo by : Unknown</p>
+        <p class="photo-credit">Photo by : Myself</p>
     </div>
     <div id="container-content">
         <header>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolores non alias, id aperiam saepe
-                tempora quos corrupti distinctio repellendus fuga odio facilis recusandae omnis maxime quaerat nesciunt,
-                accusantium quisquam.</p>
-                <br>
+            <p>We know you've been wanting to cook. Or at least you want to want to cook... We have the solution right there.
+                At the tips of your fingers. All your problems will vanish away and instead of wondering for how long you've been on your phone,
+                You'll wonder what amazing recipe you will find here next...
+            </p>
+            <br>
             <p>You know you want to</p>
         </header>
         <section>
@@ -28,19 +29,19 @@
             <form>
                 <div class="first-name">
                     <label for="first-name">FIRST NAME</label>
-                    <input type="text" id="first-name">
+                    <input type="text" id="first-name" placeholder="John" pattern="^[^0-9]+$" required>
                 </div>
                 <div class="lastname">
                     <label for="last-name">LAST NAME</label>
-                    <input type="text" id="last-name">
+                    <input type="text" id="last-name" placeholder="Fitzgerald" pattern="^[^0-9]+$" required>
                 </div>
                 <div class="email">
                     <label for="email">EMAIL</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" placeholder="john.fitz@example.com" required>
                 </div>
                 <div class="phone">
                     <label for="phone">PHONE NUMBER</label>
-                    <input type="tel" id="phone">
+                    <input type="tel" id="phone" placeholder="+33 6 85 85 85 85">
                 </div>
                 <div class="password">
                     <label for="password">PASSWORD</label>
@@ -50,13 +51,14 @@
                     <label for="confirm-password">CONFIRM</label>
                     <input type="password" id="confirm-password" required>
                 </div>
-            </form>
         </section>
         <footer>
             <div class="button-submit">
                 <button type="submit">Create Account</button>
             </div>
+            </form>
             <p>Already have an Account ? <a href="#">Log in</a></p>
+            <p>Lost ? Get to the <a href="../index.html">Home Screen</a></p>
         </footer>
     </div>
 </body>
