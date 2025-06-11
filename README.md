@@ -9,3 +9,10 @@ This means that the website still looks good if you reduce the size of the windo
 but there are still clunky things in phone mode (like almost no margin xdd).
 The cards are great tho and they look good all the time !
 I didn't want to bruteforce the full responsiveness so i am waiting until i have some more knowledge.
+
+## Update 2
+Again, instead of doing another repo for the Login page project, i am adding a login page to this
+magnificient recipe website ! I didn't do the exact design as i tried to fit mine in the viewport height.
+I am quite happy with the result and the form interactivity even if i could go much further with animations
+and everything... The responsiveness is super bad tho, i will need to come back to that another time. <br>
+I also updated the index page mostly in terms of colors.
