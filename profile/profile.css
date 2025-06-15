@@ -107,8 +107,13 @@ ul {
     padding: 0;
 }
 
-body {
+body,
+html {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    overflow-y: auto;
 }
 
 .profile {
@@ -157,8 +162,9 @@ nav li {
 
 .main-container {
     margin-left: clamp(350px, 20%, 500px);
-    display: grid;
-    grid-template-rows: 1fr 7fr;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* HEADER  */
@@ -267,22 +273,24 @@ section {
     background-color: whitesmoke;
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
+    height: auto;
+    max-height: fit-content;
 }
 
 .cards-container {
     flex: 3 1 400px;
+    overflow: visible;
 }
 
 aside {
     flex: 1 1 200px;
+    overflow: visible;
 }
 
 /* CARDS  */
 
 .cards {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
@@ -324,7 +332,8 @@ h2 {
 
 /* ANNOUCEMENTS  */
 
-.announcements, .trending {
+.announcements,
+.trending {
     width: 85%;
     margin: auto;
 }
@@ -353,7 +362,7 @@ h2 {
 /* TRENDING  */
 
 .trending {
-        background-color: white;
+    background-color: white;
     border-radius: 15px;
     box-shadow: 5px 5px 10px #ccc;
     padding: 2.5rem;
