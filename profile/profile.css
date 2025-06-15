@@ -98,7 +98,7 @@ header img {
 }
 
 aside img {
-    max-width: 3rem;
+    max-width: 4rem;
 }
 
 ul {
@@ -296,6 +296,7 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 306px;
 }
 
 .card-icons {
@@ -323,6 +324,11 @@ h2 {
 
 /* ANNOUCEMENTS  */
 
+.announcements, .trending {
+    width: 85%;
+    margin: auto;
+}
+
 .announcements {
     background-color: white;
     border-radius: 15px;
@@ -346,3 +352,28 @@ h2 {
 
 /* TRENDING  */
 
+.trending {
+        background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #ccc;
+    padding: 2.5rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.trending-profile {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.trending-profile .tag {
+    font-size: 1.1rem;
+}
+
+.trending-profile p {
+    color: #777;
+}
