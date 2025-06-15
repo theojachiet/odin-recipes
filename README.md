@@ -16,3 +16,9 @@ magnificient recipe website ! I didn't do the exact design as i tried to fit min
 I am quite happy with the result and the form interactivity even if i could go much further with animations
 and everything... The responsiveness is super bad tho, i will need to come back to that another time. <br>
 I also updated the index page mostly in terms of colors.
+
+## Update 3
+Another contribution. The website is looking so not cohesive ahah but this is still good practice and nicer than having
+unconnected pages for each project. This Dashboard page was really cool to build, the prettiest of the three i would say.
+I have pretty good responsiveness for the sideview on a computer with the cards and aside stacking up ! But i am missing
+media queries for the phone layout where the sidebar would be on top. I think i'm not yet ready for that.
