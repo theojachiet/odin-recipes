@@ -27,9 +27,9 @@ body {
 
 :root {
     --color-palette-primary: #155263;
-    --color-palette-secondary : #ff9a3c;
-    --color-palette-third : #ff6f3c;
-    --color-palette-fourth : #ffc93c;
+    --color-palette-secondary: #ff9a3c;
+    --color-palette-third: #ff6f3c;
+    --color-palette-fourth: #ffc93c;
 }
 
 /* 6. Improve media defaults */
@@ -94,7 +94,7 @@ nav img {
 }
 
 header img {
-    max-width: 3rem;
+    max-width: 2.5rem;
 }
 
 aside img {
@@ -111,9 +111,8 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.main-container {
-    margin-left: 20%;
-
+.profile {
+    border-radius: 50%;
 }
 
 /* SIDEBAR  */
@@ -152,4 +151,118 @@ nav li {
     align-items: center;
     gap: 2rem;
     font-size: 1.5rem;
+}
+
+/* MAIN CONTAINER  */
+
+.main-container {
+    margin-left: clamp(350px, 20%, 500px);
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+}
+
+/* HEADER  */
+
+header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-left: 2rem;
+
+}
+
+.top-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 45%;
+    margin-top: 30px;
+}
+
+.top-header .searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+}
+
+.top-header input {
+    height: 3rem;
+    width: 70%;
+    border-radius: 20px;
+    padding-left: 1rem;
+    font-size: inherit;
+    font-family: inherit;
+    border: none;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 20px 2px inset #eee;
+}
+
+.top-header .profile-header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.top-header p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.top-header .profile {
+    min-width: 4rem;
+}
+
+/* BOTTOM HEADER  */
+
+.bottom-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    flex-wrap: wrap;
+    height: 45%;
+}
+
+.bottom-header .header-profile {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-profile p {
+    font-size: 1.2rem;
+}
+
+.header-profile .user-name {
+    font-size: 2rem;
+}
+
+.bottom-header ul {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 8%;
+    gap: 8%;
+}
+
+.bottom-header img {
+    min-width: 6rem;
+}
+
+button {
+    appearance: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    background-color: var(--color-palette-fourth);
+    padding: 10px 40px;
+    border-radius: 40px;
+}
+
+/* SECTION  */
+
+section {
+    background-color: whitesmoke;
 }
