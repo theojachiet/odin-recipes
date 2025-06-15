@@ -167,7 +167,7 @@ header {
     display: grid;
     grid-template-rows: 1fr 1fr;
     padding-left: 2rem;
-
+    min-height: 220px;
 }
 
 .top-header {
@@ -265,4 +265,84 @@ button {
 
 section {
     background-color: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
 }
+
+.cards-container {
+    flex: 3 1 400px;
+}
+
+aside {
+    flex: 1 1 200px;
+}
+
+/* CARDS  */
+
+.cards {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    border-left: 10px solid #ff6f3c;
+    box-shadow: 5px 5px 10px #ccc;
+    padding: 2rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+}
+
+.card p {
+    margin-top: 5px;
+    color: #777;
+    font-size: 1.1rem;
+}
+
+h2 {
+    margin-left: 16px;
+    margin-top: 30px;
+}
+
+/* ANNOUCEMENTS  */
+
+.announcements {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #ccc;
+    padding: 2.5rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+}
+
+.announcements h4 {
+    font-size: 1.15rem;
+}
+
+.announcements p {
+    margin-top: 5px;
+    color: #777;
+}
+
+/* TRENDING  */
+
