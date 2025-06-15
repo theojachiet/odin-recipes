@@ -1,56 +1,52 @@
-/* Reset */
-/* 1. Use a more-intuitive box-sizing model */
+/* ==== RESET ==== */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
 }
 
-/* 2. Remove default margin */
-* {
-    margin: 0;
-}
-
-/* 3. Enable keyword animations */
 @media (prefers-reduced-motion: no-preference) {
-    html {
-        interpolate-size: allow-keywords;
-    }
+  html {
+    interpolate-size: allow-keywords;
+  }
 }
 
-body {
-    /* 4. Add accessible line-height */
-    line-height: 1.5;
-    /* 5. Improve text rendering */
-    -webkit-font-smoothing: antialiased;
+body,
+html {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  height: auto;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --color-palette-primary: #155263;
-    --color-palette-secondary: #ff9a3c;
-    --color-palette-third: #ff6f3c;
-    --color-palette-fourth: #ffc93c;
+  --color-palette-primary: #155263;
+  --color-palette-secondary: #ff9a3c;
+  --color-palette-third: #ff6f3c;
+  --color-palette-fourth: #ffc93c;
 }
 
-/* 6. Improve media defaults */
+/* ==== MEDIA DEFAULTS ==== */
 img,
 picture,
 video,
 canvas,
 svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
-/* 7. Inherit fonts for form controls */
 input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
-/* 8. Avoid text overflows */
 p,
 h1,
 h2,
@@ -58,12 +54,16 @@ h3,
 h4,
 h5,
 h6 {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-/* 9. Improve line wrapping */
 p {
-    text-wrap: pretty;
+  text-wrap: pretty;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 h1,
@@ -72,317 +72,270 @@ h3,
 h4,
 h5,
 h6 {
-    text-wrap: balance;
+  text-wrap: balance;
 }
 
-/*
-  10. Create a root stacking context
-*/
 #root,
 #__next {
-    isolation: isolate;
+  isolation: isolate;
 }
 
-/* Image temp style to see things  */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  appearance: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  background-color: var(--color-palette-fourth);
+  padding: 10px 40px;
+  border-radius: 40px;
+}
+
+/* ==== SIDEBAR ==== */
+nav {
+  background-color: var(--color-palette-primary);
+  position: fixed;
+  width: 20%;
+  min-width: 350px;
+  height: 100%;
+  color: white;
+  display: grid;
+  font-weight: bold;
+}
+
+nav .title {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  font-size: 2.5rem;
+  gap: 2rem;
+}
+
+nav .title img {
+  max-width: 4rem;
+}
 
 nav img {
     max-width: 3rem;
+}
+
+nav ul {
+  display: grid;
+  gap: 25px;
+  margin-left: 2rem;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+
+/* ==== MAIN ==== */
+.main-container {
+  margin-left: clamp(350px, 20%, 500px);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==== HEADER ==== */
+header {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding-left: 2rem;
+  min-height: 220px;
+}
+
+.top-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 30px;
+  height: 45%;
+}
+
+.top-header .searchbar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.top-header input {
+  height: 3rem;
+  width: 70%;
+  border: none;
+  border-radius: 20px;
+  padding-left: 1rem;
+  background-color: #eee;
+  box-shadow: inset 0px 0px 20px 2px #eee;
+}
+
+.top-header .profile-header-bar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.top-header p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.top-header .profile {
+  min-width: 4rem;
+  border-radius: 50%;
+}
+
+/* ==== BOTTOM HEADER ==== */
+.bottom-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  flex-wrap: wrap;
+  height: 45%;
+}
+
+.header-profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header-profile p {
+  font-size: 1.2rem;
+}
+
+.header-profile .user-name {
+  font-size: 2rem;
+}
+
+.bottom-header ul {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 8%;
+  gap: 8%;
+}
+
+.bottom-header img {
+  min-width: 6rem;
+}
+
+header img {
+    max-width: 2.5rem;
+    border-radius: 50%;
+}
+
+/* ==== SECTION ==== */
+section {
+  background-color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards-container {
+  flex: 3 1 400px;
+}
+
+aside {
+  flex: 1 1 200px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  border-left: 10px solid var(--color-palette-third);
+  box-shadow: 5px 5px 10px #ccc;
+  padding: 2rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 306px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin-top: 5px;
+  color: #777;
+  font-size: 1.1rem;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 .card img {
     max-width: 2rem;
 }
 
-header img {
-    max-width: 2.5rem;
+/* ==== SECTION HEADINGS ==== */
+h2 {
+  margin: 30px 0 0 16px;
+}
+
+/* ==== ANNOUNCEMENTS & TRENDING ==== */
+.announcements,
+.trending {
+  width: 85%;
+  margin: 1rem auto;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #ccc;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.announcements {
+  height: 500px;
+}
+
+.trending {
+  height: 400px;
+}
+
+.announcements h4 {
+  font-size: 1.15rem;
+}
+
+.announcements p,
+.trending-profile p {
+  margin-top: 5px;
+  color: #777;
+}
+
+.trending-profile {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.trending-profile .tag {
+  font-size: 1.1rem;
 }
 
 aside img {
     max-width: 4rem;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-body,
-html {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    height: auto;
-    overflow-y: auto;
-}
-
-.profile {
     border-radius: 50%;
-}
-
-/* SIDEBAR  */
-
-nav {
-    background-color: var(--color-palette-primary);
-    position: fixed;
-    width: 20%;
-    min-width: 350px;
-    height: 100%;
-    color: white;
-    display: grid;
-    font-weight: bold;
-}
-
-nav .title {
-    display: flex;
-    align-items: center;
-    margin-left: 1rem;
-    font-size: 2.5rem;
-    gap: 2rem;
-}
-
-nav .title img {
-    max-width: 4rem;
-}
-
-nav ul {
-    display: grid;
-    gap: 25px;
-    margin-left: 2rem;
-}
-
-nav li {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    font-size: 1.5rem;
-}
-
-/* MAIN CONTAINER  */
-
-.main-container {
-    margin-left: clamp(350px, 20%, 500px);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* HEADER  */
-
-header {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    padding-left: 2rem;
-    min-height: 220px;
-}
-
-.top-header {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    height: 45%;
-    margin-top: 30px;
-}
-
-.top-header .searchbar {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 2rem;
-}
-
-.top-header input {
-    height: 3rem;
-    width: 70%;
-    border-radius: 20px;
-    padding-left: 1rem;
-    font-size: inherit;
-    font-family: inherit;
-    border: none;
-    background-color: whitesmoke;
-    box-shadow: 0px 0px 20px 2px inset #eee;
-}
-
-.top-header .profile-header-bar {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.top-header p {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.top-header .profile {
-    min-width: 4rem;
-}
-
-/* BOTTOM HEADER  */
-
-.bottom-header {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    flex-wrap: wrap;
-    height: 45%;
-}
-
-.bottom-header .header-profile {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 2rem;
-}
-
-.header-profile p {
-    font-size: 1.2rem;
-}
-
-.header-profile .user-name {
-    font-size: 2rem;
-}
-
-.bottom-header ul {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    margin-right: 8%;
-    gap: 8%;
-}
-
-.bottom-header img {
-    min-width: 6rem;
-}
-
-button {
-    appearance: none;
-    border: none;
-    font-size: 1.5rem;
-    color: white;
-    background-color: var(--color-palette-fourth);
-    padding: 10px 40px;
-    border-radius: 40px;
-}
-
-/* SECTION  */
-
-section {
-    background-color: whitesmoke;
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    max-height: fit-content;
-}
-
-.cards-container {
-    flex: 3 1 400px;
-    overflow: visible;
-}
-
-aside {
-    flex: 1 1 200px;
-    overflow: visible;
-}
-
-/* CARDS  */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-}
-
-.card {
-    background-color: white;
-    border-radius: 15px;
-    border-left: 10px solid #ff6f3c;
-    box-shadow: 5px 5px 10px #ccc;
-    padding: 2rem;
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 306px;
-}
-
-.card-icons {
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.card h3 {
-    font-size: 1.5rem;
-}
-
-.card p {
-    margin-top: 5px;
-    color: #777;
-    font-size: 1.1rem;
-}
-
-h2 {
-    margin-left: 16px;
-    margin-top: 30px;
-}
-
-/* ANNOUCEMENTS  */
-
-.announcements,
-.trending {
-    width: 85%;
-    margin: auto;
-}
-
-.announcements {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px #ccc;
-    padding: 2.5rem;
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 500px;
-}
-
-.announcements h4 {
-    font-size: 1.15rem;
-}
-
-.announcements p {
-    margin-top: 5px;
-    color: #777;
-}
-
-/* TRENDING  */
-
-.trending {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px #ccc;
-    padding: 2.5rem;
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 400px;
-}
-
-.trending-profile {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-
-.trending-profile .tag {
-    font-size: 1.1rem;
-}
-
-.trending-profile p {
-    color: #777;
 }
